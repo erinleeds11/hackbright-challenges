@@ -41,5 +41,26 @@ def decode(phrase):
 
     return decoded
 
+def fit_str_to_width():
+
+    tokens = list(reversed(string.split))
+    curr_line = []
+    total_lines = []
+
+    while tokens:
+        word = tokens[-1]
+        if len(' '.join(curr_line + [word])) <= limit:
+            curr_line.append(tokens.pop())
+        
+        else:
+            if curr_line:
+                total_lines.append(' '.join(curr_line))
+                
+            curr_line = []
+    
+    total_lines.append(' '.join(curr_line))
+
+    for line in total_lines:
+        print(line)
 
 
