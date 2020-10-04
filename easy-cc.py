@@ -155,5 +155,31 @@ def truncate_repeats(phrase):
                     return False
         return True
 
+    def compress_string(phrase):
+
+        compressed = ""
+        prev = ''
+        count = 0
+        for ch in phrase:
+            if ch != prev:
+                compressed += prev
+                if count > 1:
+                    compressed += count
+                    count = 0
+                    prev = c
+            
+            count +=1
+            prev = ch
+    
+    def decode_string(phrase):
+        decoded =''
+        i = 0
+        while i < len(phrase):
+            num_to_skip = phrase[i] + 1
+            decoded += phrase[num_to_skip]
+            i += num_to_skip
+
+
+
 
 
