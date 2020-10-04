@@ -181,5 +181,11 @@ def truncate_repeats(phrase):
 
 
 
+def missing_numer(nums):
+    set_nums = set(list(range(1, nums+1))
 
-
+    for num in nums:
+        if num in set_nums:
+            set_nums.remove(num)
+    
+    return set_nums.pop()
