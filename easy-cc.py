@@ -189,3 +189,13 @@ def missing_numer(nums):
             set_nums.remove(num)
     
     return set_nums.pop()
+
+def pangram(phrase):
+
+    return len{ch.lower() for ch in phrase.split() if word.isalpha()} == 26
+
+def show_evens(nums):
+
+    return [num for index, num in enumerate(nums) if num % 2==0]
+
+def split_str{()}
