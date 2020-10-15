@@ -19,8 +19,21 @@ def binary_search(sequence, item):
 
     #Simple hash function
 
-    def get_hash(key):
-        h = 0
-        for char in key:
-            h += ord(char)
-        return h % 100
+    class HashTable:
+        def __init__(self):
+            self.max = 100
+            self.lst = [None for i in range(self.max)]
+        
+        def get_hash(self, key):
+            h = 0
+            for char in key:
+                h += ord(char)
+            return h % self.max
+            
+        def add(self, key, value):
+            h = self.get_hash(key)
+            self.lst[h] = value
+        
+        def get(self, key):
+            h = self.get_hash(key)
+            return self.lst[h] 
