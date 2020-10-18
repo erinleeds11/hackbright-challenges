@@ -64,3 +64,15 @@ def fit_str_to_width():
         print(line)
 
 
+def balenced_parens(s):
+    parens = 0
+    chs = set(["(", ")"])
+    for ch in s:
+        if ch in chs:
+            if ch == "(":
+                parens +=1
+            elif ch == ")" and parens >= 1:
+                parents -=1
+    return parens == 0
+
+def binary_search()
