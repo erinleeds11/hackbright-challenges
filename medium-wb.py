@@ -107,3 +107,19 @@ def count_recursively(lst):
         return 0
 
     return 1 + count_recursively(lst[1:])
+
+def encipher_str(shift, txt):
+    encoded_text = []
+
+    for ch in txt:
+        if ch.isalpha():
+            #conver to ascii
+            ascii_char = ord(ch.lower())
+            encoded_c = chr((shift + ascii_char - 97)%26 +97)
+            if ch.isupper():
+                encoded_c = encoded_c.upper()
+            encoded_text.append(encoded_c)
+        else:
+            encoded_text.append(ch)
+    
+    return " ".join(encoded_text)
