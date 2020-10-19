@@ -107,3 +107,11 @@ def remove_node(node):
 
     node.data = node.next.data
     node.next = node.next.next
+
+def reverse_linked_list(head):
+    """Given LL head node, return head node of new, reversed linked list.
+
+    >>> ll = Node(1, Node(2, Node(3)))
+    >>> reverse_linked_list(ll).as_string()
+    '321'
+    """
