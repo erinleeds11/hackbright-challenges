@@ -63,3 +63,21 @@ class Solution(object):
         validateLeft = helper(self, root.left, minValue, root.data)
         validateRight = helper(self, root.right, root.data, max_value)
         return validateLeft == validateRight
+
+#Polish Notation Calc
+
+def calc(s):
+    tokens = s.split()
+    operand2 = int(s.pop())
+    while tokens:
+        operand1 = int(s.pop())
+        operator = s.pop()
+        if operator == '*':
+            operand2 *=operand1
+        elif operator == '+':
+             operand2 +=operand1
+        elif operator == '-':
+             operand2 -=operand1
+        elif operator == '/':
+             operand2 //=operand1
+        return operand2
