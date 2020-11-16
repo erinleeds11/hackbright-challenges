@@ -27,3 +27,10 @@ def selectionSort(alist):
         alist[positionOfMax] = temp
 
 
+
+made_swap = True
+
+for i in range(len(lst) -1 ):
+    made_swap = False
+    for i in range(len(lst)-i-1):
+        if lst[i] > lst[i+1]
